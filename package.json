@@ -1,0 +1,24 @@
+{
+  "name": "bly",
+  "version": "1.0.0",
+  "description": "A cryptocurrency block explorer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamalhansen/bly.git"
+  },
+  "keywords": [
+    "block",
+    "explorer",
+    "cryptocurrency"
+  ],
+  "author": "Jamal Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamalhansen/bly/issues"
+  },
+  "homepage": "https://github.com/jamalhansen/bly#readme"
+}
