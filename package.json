@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "A cryptocurrency block explorer",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/jamalhansen/bly/issues"
   },
-  "homepage": "https://github.com/jamalhansen/bly#readme"
+  "homepage": "https://github.com/jamalhansen/bly#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0"
+  }
 }
