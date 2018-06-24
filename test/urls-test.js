@@ -11,6 +11,11 @@ const test_p = {
 };
 
 describe('urls module', () => {
+  it('should not require arguments to its constructor', () => {
+    const u = new Urls;
+    expect(typeof u).to.equal("object");
+  });
+ 
   it('should initialize the username', () => {
     const u = new Urls;
     u.init({"username": "user"});
