@@ -68,4 +68,11 @@ describe('urls module', () => {
     const result = u.rpcUrl();
     expect(result).to.equal("http://a:b@c:2");
   });
+
+  it('should emit the url for a specific rpc call', () => {
+    const u = new Urls;
+    u.init(test_p);
+    const result = u.rpcUrl('getConnectionCount');
+    expect(result).to.equal("http://a:b@c:2/api/getConnectionCount");
+  });
 });

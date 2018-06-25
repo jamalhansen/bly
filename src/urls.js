@@ -18,8 +18,12 @@ class Urls {
            !isNaN(this.port);
   }
 
-  rpcUrl() {
-    return `http://${this.username}:${this.password}@${this.address}:${this.port}`;
+  rpcUrl(call) {
+    if(call) {
+      return `http://${this.username}:${this.password}@${this.address}:${this.port}/api/${call}`;
+    } else {
+      return `http://${this.username}:${this.password}@${this.address}:${this.port}`;
+    }  
   }
 }
 

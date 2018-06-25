@@ -26,7 +26,11 @@
   "homepage": "https://github.com/jamalhansen/bly#readme",
   "devDependencies": {
     "chai": "^4.1.2",
+    "fetch-mock": "^6.4.4",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.1.2"
   }
 }
