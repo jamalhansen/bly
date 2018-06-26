@@ -1,7 +1,7 @@
 'use strict'
 
 const expect = require('chai').expect;
-const Urls = require('../src/urls');
+const Urls = require('../../src/urls');
 
 const test_p = {
   "username": "a",
