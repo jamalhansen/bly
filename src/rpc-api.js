@@ -19,4 +19,4 @@ const rpc = (url, call) => {
   }).then(result => result.json());
 }
 
-module.exports = { rpc: rpc };
+module.exports = rpc;

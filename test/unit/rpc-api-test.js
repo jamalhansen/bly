@@ -2,7 +2,7 @@
 
 const expect = require('chai').expect;
 const fetchMock = require('fetch-mock');
-const rpc = require('../../src/rpc-api').rpc;
+const rpc = require('../../src/rpc-api');
 const readFile = require('../test-helpers').readFile;
 
 describe('RPC API module', () => {
