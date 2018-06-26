@@ -1,21 +1,22 @@
 'use strict'
 
-class RpcApi {
-  init(parms) {
-    this.fetch = parms.fetch;
-    this.url = parms.url;
+require('es6-promise').polyfill();
+require("isomorphic-fetch");
 
-    return this.validate();
-  }  
-
-  validate() {
-    return !!this.fetch &&
-           !!this.url;
-  }
-
-  get(call, cb, err) {
-    this.fetch.fetch(`${this.url}/api/${call}`, cb, err);
-  }
+const rpc = (url, call) => {
+  return fetch(url, {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "jsonrpc":"1.0",
+      "id":"bly",
+      "method":call,
+      "params":[]
+    })
+  }).then(result => result.json());
 }
 
-module.exports = RpcApi;
+module.exports = { rpc: rpc };
