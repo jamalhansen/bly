@@ -3,9 +3,9 @@
 const expect = require('chai').expect;
 const fetchMock = require('fetch-mock');
 const rpc = require('../../src/rpc-api');
-const readFile = require('../test-helpers').readFile;
+const loadData = require('../test-helpers').loadData;
 
-describe('RPC API module', () => {
+describe('RPC API', () => {
   it('should get connection count', async () => {
     fetchMock.post('http://127.0.0.1', { result: 4 });
 
@@ -16,7 +16,7 @@ describe('RPC API module', () => {
   });
 
   it('should get info', async () => {
-    const info = await readFile('getinfo', 'utf8')
+    const info = await loadData('getinfo')
 
     fetchMock.post('http://127.0.0.1', info);
 

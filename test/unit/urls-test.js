@@ -10,7 +10,7 @@ const test_p = {
   "port": 2,
 };
 
-describe('urls module', () => {
+describe('url', () => {
   it('should emit the url for a specific rpc call', () => {
     const result = url('getConnectionCount', test_p);
     expect(result).to.equal("http://a:b@c:2/api/getConnectionCount");

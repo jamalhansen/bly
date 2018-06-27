@@ -1,16 +1,11 @@
 'use strict'
 
-const fs = require('fs');
 const path = require('path')
+const readFile= require('../src/file-utils').readFile;
 
-const readFile = (filename, enc) => {
+const loadData = (filename) => {
   const file = path.resolve(__dirname, 'data', `${filename}`);
-  return new Promise((fulfill, reject) => {
-    fs.readFile(file, enc, (err, res) => {
-      if (err) reject(err);
-      else fulfill(res);
-    });
-  });
+  return readFile(file, 'utf8');
 }
 
-module.exports = { readFile : readFile };
+module.exports = { loadData : loadData };
