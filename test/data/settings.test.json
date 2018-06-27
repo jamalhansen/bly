@@ -1,0 +1,7 @@
+{
+  "rpc_host": "http://example.com",
+  "rpc_port": 9325,
+  "rpc_user": "rpcuser",
+  "rpc_pass": "rpcpass"
+}
+
