@@ -23,11 +23,17 @@ const config = f => {
     return readFile(f())
       .then(x => JSON.parse(x))
       .then(x => Object.assign({}, default_settings, x))
+  } else {
+    return new Promise((resolve) => {
+      try {
+        resolve(defaults());
+      }
+      catch(e) {
+        reject(e.message);
+      }
+    });
   };
 
-  return new Promise((resolve) => {
-    resolve(defaults());
-  });
 };
 
 module.exports = {
