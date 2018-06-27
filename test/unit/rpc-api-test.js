@@ -5,7 +5,7 @@ const fetchMock = require('fetch-mock');
 const rpc = require('../../src/rpc-api');
 const readFile = require('../test-helpers').readFile;
 
-describe('RPC API module', () => {
+describe('RPC API', () => {
   it('should get connection count', async () => {
     fetchMock.post('http://127.0.0.1', { result: 4 });
 
