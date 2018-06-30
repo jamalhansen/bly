@@ -2,3 +2,6 @@
 
 # bly
 A cryptocurrency block explorer
+
+## Status
+This project is currently under construction
